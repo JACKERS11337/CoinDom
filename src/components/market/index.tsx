@@ -1,6 +1,7 @@
 import "./style.scss";
 import { CryptoCoin } from "../cryptoCoin/";
 import { useEffect, useState } from "react";
+import { Coin } from "../../modules/cryptoCoin";
 
 export const Market = () => {
   const [data, setData] = useState([]);
@@ -10,7 +11,7 @@ export const Market = () => {
   const recordsProdPage = 10;
   const lastIndex = currentPage * recordsProdPage;
   const firstIndex = lastIndex - recordsProdPage;
-  const quantityCoin = data.slice(firstIndex, lastIndex);
+  const quantityCoin: Array<Coin> = data.slice(firstIndex, lastIndex);
   const quantityPage = Math.ceil(data.length / recordsProdPage);
 
   const pagination = [];

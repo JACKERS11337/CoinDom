@@ -1,7 +1,12 @@
 import "./style.scss";
-import { IDataProps } from "../../modules/cryptoCoin";
+import { Coin } from "../../modules/cryptoCoin";
 
-export const CryptoCoin = ({ data }: IDataProps) => {
+type PropsCoin = {
+  data: Coin;
+  key: string;
+};
+
+export const CryptoCoin = ({ data }: PropsCoin) => {
   return (
     <a className="crypto-content" href="#">
       <span>
