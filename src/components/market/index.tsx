@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 export const Market = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   const recordsProdPage = 10;
   const lastIndex = currentPage * recordsProdPage;
@@ -30,12 +31,15 @@ export const Market = () => {
 
   useEffect(() => {
     const dataFetch = async () => {
+      setLoading(true);
       const response = await fetch(url);
       const json = await response.json();
       setData(json);
+      setLoading(false);
     };
+
     dataFetch();
-  }, [url]);
+  }, []);
 
   return (
     <div className="market">
@@ -50,9 +54,15 @@ export const Market = () => {
           </div>
         </div>
         <div className="market-coins">
-          {quantityCoin.map((coin) => (
-            <CryptoCoin key={coin.id} data={coin} />
-          ))}
+          {loading ? (
+            <img src="/Loader.svg" alt="Loading..." />
+          ) : (
+            <>
+              {quantityCoin.map((coin) => (
+                <CryptoCoin key={coin.id} data={coin} />
+              ))}
+            </>
+          )}
         </div>
         <div className="market-btn">{pagination}</div>
       </div>
