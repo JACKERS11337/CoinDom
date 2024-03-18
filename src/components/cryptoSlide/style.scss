@@ -1,0 +1,50 @@
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1220px;
+  padding: 2.5rem 1.5rem;
+  font-family: Space Grotesk, sans-serif;
+  color: #fff;
+  max-width: 50rem;
+
+  img {
+    margin: 0 auto;
+  }
+
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      height: 6rem;
+      margin-bottom: 1rem;
+      width: 6rem;
+    }
+
+    .slider-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      span {
+        font-size: 1.4rem;
+      }
+
+      .green {
+        color: rgb(0, 179, 0);
+      }
+
+      .red {
+        color: red;
+      }
+    }
+
+    .slider-price {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+  }
+}

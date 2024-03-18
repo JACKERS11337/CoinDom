@@ -1,12 +1,12 @@
 import "./style.scss";
 import { CryptoCoin } from "../cryptoCoin/";
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Coin } from "../../modules/cryptoCoin";
+import { CoinContext } from "../../context/coinContext";
 
 export const Market = () => {
-  const [data, setData] = useState([]);
+  const { data, loading } = useContext(CoinContext);
   const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(false);
 
   const recordsProdPage = 10;
   const lastIndex = currentPage * recordsProdPage;
@@ -26,21 +26,6 @@ export const Market = () => {
       </button>
     );
   }
-
-  const url: string =
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&sparkline=false";
-
-  useEffect(() => {
-    const dataFetch = async () => {
-      setLoading(true);
-      const response = await fetch(url);
-      const json = await response.json();
-      setData(json);
-      setLoading(false);
-    };
-
-    dataFetch();
-  }, []);
 
   return (
     <div className="market">
