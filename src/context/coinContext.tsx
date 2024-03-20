@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import { Coin } from "../modules/cryptoCoin";
 
 type ContextProps = {
-  children: React.JSX.Element;
+  children: React.ReactNode;
 };
 
 type ReactContext = {
@@ -11,7 +11,7 @@ type ReactContext = {
 };
 
 export const CoinContext = createContext<ReactContext | null>(null);
-console.log(CoinContext);
+
 export const CoinProvider = ({ children }: ContextProps) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);

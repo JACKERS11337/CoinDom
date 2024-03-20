@@ -1,5 +1,5 @@
 import "./style.scss";
-import { CryptoCoin } from "../cryptoCoin/";
+import { CryptoCoin } from "../../components/cryptoCoin";
 import { useContext, useState } from "react";
 import { Coin } from "../../modules/cryptoCoin";
 import { CoinContext } from "../../context/coinContext";

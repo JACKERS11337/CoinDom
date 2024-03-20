@@ -10,6 +10,7 @@
   font-weight: 500;
   padding: 2rem 1rem;
   border-bottom: 2px solid #fff;
+  background-color: transparent;
 
   span {
     display: flex;
@@ -35,4 +36,8 @@
   .red {
     color: red;
   }
+}
+
+.crypto-content:hover {
+  background-color: rgba(67, 0, 103, 0.372);
 }

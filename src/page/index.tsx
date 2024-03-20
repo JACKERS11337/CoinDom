@@ -1,4 +1,5 @@
-import { Market } from "../components/market";
+import { Market } from "../widgets/market";
+import { ChooseUs } from "../widgets/choose-us";
 import { TrackAndTrade } from "../widgets/track&trade";
 import "./style.scss";
 
@@ -7,6 +8,7 @@ export const Home = () => {
     <div className="home">
       <TrackAndTrade />
       <Market />
+      <ChooseUs />
     </div>
   );
 };

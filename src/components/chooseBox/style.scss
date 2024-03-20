@@ -1,0 +1,41 @@
+.choose-box {
+  display: flex;
+  align-items: center;
+  font-family: Space Grotesk, sans-serif;
+  background-color: hsla(0, 0%, 100%, 0.05);
+  border: 1px solid hsla(0, 0%, 51%, 0.25);
+  border-radius: 2.4rem;
+  padding: 2.4rem;
+  gap: 2rem;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(25deg, #2600fc, #ff00ea);
+    border-radius: 1.2rem;
+    width: 7rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+
+  .choose-box-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #e7e6e8;
+
+    h4 {
+      font-family: Noto Sans Georgian, sans-serif;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: left;
+      font-family: Noto Sans Georgian, sans-serif;
+      font-size: 1.1rem;
+    }
+  }
+}
