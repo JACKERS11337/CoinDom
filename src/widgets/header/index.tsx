@@ -2,26 +2,35 @@ import "./style.scss";
 import { TbBrandDiscord } from "react-icons/tb";
 import { FiTwitter } from "react-icons/fi";
 
+import { Link } from "react-scroll";
+
 export const Header = () => {
   return (
     <header>
       <div className="header-container">
         <a>
-          <p>COINDOM</p>
+          <p>
+            <Link to="home" smooth={true} duration={1000}>
+              COINDOM
+            </Link>
+          </p>
         </a>
         <nav>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="home" smooth={true} duration={1000}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#">Market</a>
+              <Link to="market" smooth={true} duration={1000}>
+                Market
+              </Link>
             </li>
             <li>
-              <a href="#">Choose Us</a>
-            </li>
-            <li>
-              <a href="#">Join</a>
+              <Link to="choose" smooth={true} duration={1000}>
+                Choose Us
+              </Link>
             </li>
           </ul>
         </nav>

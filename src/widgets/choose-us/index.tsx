@@ -10,7 +10,7 @@ import { PiStackSimple } from "react-icons/pi";
 
 export const ChooseUs = () => {
   return (
-    <div className="choose-us">
+    <div id="choose" className="choose-us">
       <h2>
         WHY <span>CHOOSE US</span>
       </h2>

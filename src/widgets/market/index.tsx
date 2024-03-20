@@ -28,7 +28,7 @@ export const Market = () => {
   }
 
   return (
-    <div className="market">
+    <div id="market" className="market">
       <h2>Market Update</h2>
       <div className="market-update">
         <div className="market-content">
