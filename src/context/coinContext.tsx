@@ -11,6 +11,7 @@ type ReactContext = {
 };
 
 export const CoinContext = createContext<ReactContext | null>(null);
+console.log(CoinContext);
 export const CoinProvider = ({ children }: ContextProps) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);

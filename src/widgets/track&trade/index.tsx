@@ -1,9 +1,11 @@
 import { CryptoSlider } from "../../components/cryptoSlide";
-import { Coin } from "../../modules/cryptoCoin";
+import { CryptoTitle } from "../../components/cryptoTitle";
+import "./style.scss";
 
 export const TrackAndTrade = () => {
   return (
-    <div className="TrackAndTrade">
+    <div className="track-trade">
+      <CryptoTitle />
       <CryptoSlider />
     </div>
   );
