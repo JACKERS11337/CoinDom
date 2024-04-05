@@ -3,8 +3,13 @@ import { Coin } from "../../modules/cryptoCoin";
 import { CoinContext } from "../../context/coinContext";
 import "./style.scss";
 
+type ReactContext = {
+  data: Array<Coin>;
+  loading: boolean;
+};
+
 export const CryptoSlider = () => {
-  const { data, loading } = useContext(CoinContext);
+  const { data, loading } = useContext(CoinContext) as ReactContext;
 
   const crypto: Array<Coin> = data.slice(0, 4);
 

@@ -13,8 +13,8 @@ type ReactContext = {
 export const CoinContext = createContext<ReactContext | null>(null);
 
 export const CoinProvider = ({ children }: ContextProps) => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState<Array<Coin>>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const url: string =
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&sparkline=false";

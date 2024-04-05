@@ -4,8 +4,13 @@ import { useContext, useState } from "react";
 import { Coin } from "../../modules/cryptoCoin";
 import { CoinContext } from "../../context/coinContext";
 
+type ReactContext = {
+  data: Array<Coin>;
+  loading: boolean;
+};
+
 export const Market = () => {
-  const { data, loading } = useContext(CoinContext);
+  const { data, loading } = useContext(CoinContext) as ReactContext;
   const [currentPage, setCurrentPage] = useState(1);
 
   const recordsProdPage = 10;
