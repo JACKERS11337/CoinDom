@@ -1,7 +1,6 @@
 import "./style.scss";
 import { TbBrandDiscord } from "react-icons/tb";
 import { FiTwitter } from "react-icons/fi";
-
 import { Link } from "react-scroll";
 
 export const Header = () => {
